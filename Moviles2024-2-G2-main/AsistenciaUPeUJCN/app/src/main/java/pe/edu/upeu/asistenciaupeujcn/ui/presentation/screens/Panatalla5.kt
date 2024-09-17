@@ -4,10 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,11 +18,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 @Composable
-fun Pantalla1(
-    navegarPantalla2: (String) -> Unit
-) {
+fun Pantalla5() {
     var textValue by remember { mutableStateOf("") }
     Column(
         modifier = Modifier
@@ -35,19 +29,12 @@ fun Pantalla1(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Mery Elizabeth Flores Llanque",
+            text = "PANTALLA 5hhhhh",
             style = TextStyle(
                 color = Color.Black, fontSize = 42.sp,
                 fontWeight = FontWeight.Black
             )
         )
-        TextField(
-            value = textValue,
-            onValueChange = { textValue = it },
-            label = { Text("Introducir Texto") }
-        )
-        Button(onClick = { navegarPantalla2(textValue) }) {
-            Text("Enviar")
-        }
+
     }
 }

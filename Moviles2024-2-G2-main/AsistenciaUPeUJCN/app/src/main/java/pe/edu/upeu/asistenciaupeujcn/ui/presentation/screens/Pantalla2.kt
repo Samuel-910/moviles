@@ -2,17 +2,18 @@ package pe.edu.upeu.asistenciaupeujcn.ui.presentation.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -23,10 +24,10 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun Pantalla1(
-    navegarPantalla2: (String) -> Unit
+fun Pantalla2(
+    text: String,
+    darkMode: MutableState<Boolean>
 ) {
-    var textValue by remember { mutableStateOf("") }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -35,19 +36,25 @@ fun Pantalla1(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Mery Elizabeth Flores Llanque",
+            text = text,
             style = TextStyle(
                 color = Color.Black, fontSize = 42.sp,
                 fontWeight = FontWeight.Black
             )
         )
-        TextField(
-            value = textValue,
-            onValueChange = { textValue = it },
-            label = { Text("Introducir Texto") }
-        )
-        Button(onClick = { navegarPantalla2(textValue) }) {
-            Text("Enviar")
+        Button(
+            onClick = { darkMode.value = !darkMode.value }
+        ) {
+            Icon(
+                imageVector = if (darkMode.value) {
+                    Icons.Default.Face
+                } else {
+                    Icons.Default.Search
+                },
+                contentDescription = "Dark mode Icon"
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text("Toggle Dark Mode")
         }
     }
 }
