@@ -34,4 +34,13 @@ sealed class Destinations(
                 return "actividadForm?actId=$actId"
             }
         }
+    object PantallaQRHome : Destinations("ListaActividadQR",
+        "Reg. Asis. QR", Icons.Filled.AccountCircle )
+    object RegAsisQRForm:
+        Destinations("RegAsisQRForm?actId={actId}", "Form Reg QR.",
+            Icons.Filled.Add){
+        fun passId(actId:String?):String{
+            return "regAsisQRForm?actId=$actId"
+        }
+    }
 }

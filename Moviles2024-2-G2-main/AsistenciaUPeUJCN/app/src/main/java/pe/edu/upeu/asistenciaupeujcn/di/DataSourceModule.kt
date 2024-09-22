@@ -11,6 +11,7 @@ import okhttp3.OkHttpClient
 import pe.edu.upeu.asistenciaupeujcn.data.local.DbDataSource
 import pe.edu.upeu.asistenciaupeujcn.data.local.dao.ActividadDao
 import pe.edu.upeu.asistenciaupeujcn.data.remote.RestActividad
+import pe.edu.upeu.asistenciaupeujcn.data.remote.RestAsistenciax
 import pe.edu.upeu.asistenciaupeujcn.data.remote.RestUsuario
 import pe.edu.upeu.asistenciaupeujcn.utils.TokenUtils
 import retrofit2.Retrofit
@@ -56,7 +57,11 @@ class DataSourceModule {
         return retrofit.create(RestActividad::class.java)
     }
 
-
+    @Singleton
+    @Provides
+    fun restAsistenciax(retrofit: Retrofit): RestAsistenciax {
+        return retrofit.create(RestAsistenciax::class.java)
+    }
 
 
     @Singleton

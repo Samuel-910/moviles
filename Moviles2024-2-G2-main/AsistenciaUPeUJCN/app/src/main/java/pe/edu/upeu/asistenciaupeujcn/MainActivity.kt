@@ -155,6 +155,7 @@ fun MainScreen(
         Destinations.Pantalla4,
         Destinations.Pantalla5,
         Destinations.ActividadUI,
+        Destinations.PantallaQRHome,
 //Destinations.MaterialesxUI,
 //Destinations.PantallaQR
     )
