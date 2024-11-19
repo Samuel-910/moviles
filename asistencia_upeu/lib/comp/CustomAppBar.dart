@@ -22,7 +22,7 @@ class _CustomAppBarState extends State<CustomAppBar>{
   Widget build(BuildContext context) {
     int coloS=0;
     return AppBar(
-      title: Center(child: AppTheme.useMaterial3 ? const Text("Material 3") : const Text("Material 2")),
+      title: Center(child: AppTheme.useMaterial3 ? const Text("Farmacia VITALPHARM") : const Text("Farmacia VITALPHARM")),
       actions: [
         IconButton(
           icon: AppTheme.useLightMode? const Icon(Icons.wb_sunny_outlined): const Icon(Icons.wb_sunny),

@@ -1,7 +1,6 @@
 import 'package:asistencia_upeu/theme/AppTheme.dart';
 import 'package:asistencia_upeu/drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:toast/toast.dart';
 
 class DrawerUserController extends StatefulWidget {
   const DrawerUserController({

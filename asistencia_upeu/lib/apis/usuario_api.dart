@@ -9,7 +9,8 @@ import 'package:retrofit/retrofit.dart';
 part 'usuario_api.g.dart';
 
 @RestApi(baseUrl: UrlApi.urlApix)
-abstract class UsuarioApi{
+abstract class UsuarioApi{ //davidmp@upeu.upeu.edu    Da123456*
+
   factory UsuarioApi(Dio dio, {String baseUrl})=_UsuarioApi;
 
   static UsuarioApi create(){
@@ -18,6 +19,7 @@ abstract class UsuarioApi{
     return UsuarioApi(dio);
   }
 
-  @POST("/asis/login")//davidmp@upeu.edu.pe Da12345*
+  @POST("/asis/login")
   Future<RespUsuarioModelo> login(@Body() UsuarioModelo usuario);
+
 }

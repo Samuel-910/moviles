@@ -1,4 +1,4 @@
-//import 'package:asistencia_appn/drawer/drawer_user_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:asistencia_upeu/theme/AppTheme.dart';
 class CustomAppBarX extends StatefulWidget implements
@@ -38,7 +38,7 @@ class _CustomAppBarState extends State<CustomAppBarX>{
             );
           },
         ),*/
-      title: Center(child: AppTheme.useMaterial3 ? const Text("Material 3") : const Text("Material 2")),
+      title: Center(child: AppTheme.useMaterial3 ? const Text("Farmacia VITALPHARM") : const Text("Farmacia VITALPHARM")),
       actions: [
 
         IconButton(

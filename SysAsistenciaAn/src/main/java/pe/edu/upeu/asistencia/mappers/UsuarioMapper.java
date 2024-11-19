@@ -3,6 +3,7 @@ package pe.edu.upeu.asistencia.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 import pe.edu.upeu.asistencia.dtos.UsuarioCrearDto;
 import pe.edu.upeu.asistencia.dtos.UsuarioDto;
 import pe.edu.upeu.asistencia.models.Usuario;

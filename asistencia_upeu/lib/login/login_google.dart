@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image(
-                    image: AssetImage("assets/imagen/logo_upeu2.png"),
+                    image: AssetImage("assets/imagen/logo.png"),
                     height: 180.0),
                 SizedBox(height: 20),
                 _buildForm(),

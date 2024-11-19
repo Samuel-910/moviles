@@ -36,30 +36,34 @@ class _HomeDrawerState extends State<HomeDrawer> {
         icon: Icon(Icons.home),
       ),
       DrawerList(
-        index: DrawerIndex.FeedBack,
-        labelName: 'Actividad',
-        isAssetsImage: true,
-        imageName: 'assets/imagen/man-icon.png',
+        index: DrawerIndex.Inventario,
+        labelName: 'Inventario',
+        icon: Icon(Icons.store),
       ),
       DrawerList(
-        index: DrawerIndex.Help,
-        labelName: 'Actividad Bloc',
-        icon: Icon(Icons.help),
+        index: DrawerIndex.Cliente,
+        labelName: 'Cliente',
+        icon: Icon(Icons.person),
       ),
       DrawerList(
-        index: DrawerIndex.Invite,
-        labelName: 'Actividad Bloc Fire',
-        icon: Icon(Icons.group),
+        index: DrawerIndex.Pago,
+        labelName: 'Pago',
+        icon: Icon(Icons.credit_card),
       ),
       DrawerList(
-        index: DrawerIndex.Share,
-        labelName: 'Materiales',
-        icon: Icon(Icons.share),
+        index: DrawerIndex.Transaccion,
+        labelName: 'Transaccion',
+        icon: Icon(Icons.attach_money),
       ),
       DrawerList(
-        index: DrawerIndex.About,
-        labelName: 'Información',
-        icon: Icon(Icons.info),
+        index: DrawerIndex.Detalle,
+        labelName: 'Detalle Transaccion',
+        icon: Icon(Icons.receipt_long),
+      ),
+      DrawerList(
+        index: DrawerIndex.File,
+        labelName: 'Subir archivos',
+        icon: Icon(Icons.receipt_long),
       ),
     ];
   }
@@ -286,12 +290,13 @@ class _HomeDrawerState extends State<HomeDrawer> {
 
 enum DrawerIndex {
   HOME,
-  FeedBack,
-  Help,
-  Share,
-  About,
-  Invite,
-  Testing,
+  Inventario,
+  Cliente,
+  Transaccion,
+  Pago,
+  Detalle,
+  File,
+
 }
 
 class DrawerList {

@@ -1,8 +1,12 @@
 import 'package:asistencia_upeu/theme/AppTheme.dart';
 import 'package:asistencia_upeu/drawer/drawer_user_controller.dart';
 import 'package:asistencia_upeu/drawer/home_drawer.dart';
-import 'package:asistencia_upeu/ui/actividad/actividad_main.dart';
+import 'package:asistencia_upeu/ui/Inventario/inventario_main.dart';
+import 'package:asistencia_upeu/ui/cliente/cliente_main.dart';
+import 'package:asistencia_upeu/ui/file/file_upload_screen.dart';
 import 'package:asistencia_upeu/ui/help_screen.dart';
+import 'package:asistencia_upeu/ui/pago/pago_main.dart';
+import 'package:asistencia_upeu/ui/transaccion/transaccion_main.dart';
 import 'package:flutter/material.dart';
 
 class NavigationHomeScreen extends StatefulWidget {
@@ -55,9 +59,35 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
         setState(() {
           screenView = HelpScreen(); //MainPersona()
         });
-      } else if (drawerIndex == DrawerIndex.FeedBack) {
+      } else if (drawerIndex == DrawerIndex.Inventario) {
         setState(() {
-          screenView = MainActividad();
+          screenView = MainInventario();
+
+        });
+      }else if (drawerIndex == DrawerIndex.Cliente) {
+        setState(() {
+          screenView = MainCliente();
+
+        });
+      }else if (drawerIndex == DrawerIndex.Pago) {
+        setState(() {
+          screenView = MainPago();
+
+        });
+      }else if (drawerIndex == DrawerIndex.Detalle) {
+        setState(() {
+          screenView = MainInventario();
+
+        });
+      }else if (drawerIndex == DrawerIndex.Transaccion) {
+        setState(() {
+          screenView = MainTransaccion();
+
+        });
+      }else if (drawerIndex == DrawerIndex.File) {
+        setState(() {
+          screenView = FileUploadScreen();
+
         });
       } else {
         //do in your way......
